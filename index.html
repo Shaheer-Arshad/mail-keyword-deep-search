@@ -1,51 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gmail Keyword Finder Extension</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gmail Keyword Deep Search — Installation & Usage Guide</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto;
-      max-width: 900px;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    img {
-      max-width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#60a5fa;--danger:#f97373;--glass: rgba(255,255,255,0.03)}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#08101a 0%, #06111a 100%);color:#e6eef8}
+    .container{max-width:900px;margin:40px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    h1{font-size:1.6rem;margin:0 0 10px}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .section{margin-top:18px;padding:16px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    ol.steps{padding-left:20px;margin:10px 0}
+    .step{margin:10px 0}
+    pre.code{background:#071126;padding:12px;border-radius:8px;overflow:auto;border:1px solid rgba(255,255,255,0.02);color:#bfe3ff}
+    .note{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(90deg, rgba(249,115,115,0.06), rgba(255,255,255,0.01));padding:12px;border-radius:8px;border:1px solid rgba(249,115,115,0.08)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .meta{font-size:0.9rem;color:var(--muted);margin-top:6px}
+    .controls{display:flex;gap:8px;margin-top:12px}
+    button{background:transparent;color:var(--accent);border:1px solid rgba(96,165,250,0.12);padding:8px 12px;border-radius:8px;cursor:pointer}
+    button.ghost{color:var(--muted);border-color:rgba(255,255,255,0.03)}
+    footer{margin-top:18px;color:var(--muted);font-size:0.9rem}
+    .kbd{display:inline-block;background:#071126;padding:4px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.02);font-family:monospace}
   </style>
 </head>
 <body>
-  <h1>Gmail Keyword Finder Chrome Extension</h1>
-  <p>
-    The Gmail Keyword Finder extension helps you search through your Gmail inbox
-    to find emails containing specific keywords. It runs locally in your browser,
-    never uploads data, and stores results only in Chrome local storage.
-  </p>
+  <div class="container">
+    <header>
+      <h1>Gmail Keyword Deep Search <small style="font-weight:600;color:var(--muted);">– Installation &amp; Usage Guide</small></h1>
+      <p class="lead">Gmail Keyword Deep Search is a Chrome extension to search your Gmail for specific keywords. It looks inside the subject, body, and links of your emails and returns a deduplicated list of matching sender email addresses.</p>
+    </header>
 
-  <h2>Features</h2>
-  <ul>
-    <li>Search Gmail for any keyword.</li>
-    <li>Results show sender email and subject line.</li>
-    <li>Fast, secure, and private — no data leaves your browser.</li>
-  </ul>
+    <section class="section" id="install">
+      <h2>1. Install in Chrome</h2>
+      <p>Follow these steps to load the extension locally into Chrome (developer mode).</p>
+      <ol class="steps">
+        <li class="step"><strong>Download Extension:</strong> Locate the downloaded ZIP file and unzip it.</li>
+        <li class="step"><strong>Open Chrome:</strong> Launch Google Chrome.</li>
+        <li class="step"><strong>Open Extensions page:</strong> Navigate to <span class="kbd">chrome://extensions/</span> in the address bar.</li>
+        <li class="step"><strong>Enable Developer Mode:</strong> Toggle <em>Developer mode</em> (top right).</li>
+        <li class="step"><strong>Load unpacked:</strong> Click <em>Load unpacked</em> and select the <code>gmail-keyword-finder/</code> folder.</li>
+        <li class="step">The extension will appear in your toolbar once loaded.</li>
+      </ol>
+      <pre class="code">chrome://extensions/</pre>
+    </section>
 
-  <h2>Screenshots</h2>
-  <p>Here’s how the extension looks in action:</p>
-  <img src="images/screenshot1.png" alt="Extension popup with keyword search" />
-  <img src="images/screenshot2.png" alt="Search results showing matched emails" />
+    <section class="section" id="setup">
+      <h2>2. First-Time Setup</h2>
+      <p>The extension uses Google OAuth via <code>chrome.identity</code>. The first time you click <strong>Search</strong>, Chrome will:</p>
+      <ol class="steps">
+        <li class="step">Ask you to select a Gmail account.</li>
+        <li class="step">Request permission to access your emails.</li>
+        <li class="step">Click <strong>Allow</strong> to grant access. This is required so the extension can scan matching emails.</li>
+      </ol>
 
-  <h2>Privacy</h2>
-  <p>
-    We never store or share your Gmail data. Read our 
-    <a href="privacy-policy.html">Privacy Policy</a>.
-  </p>
+
+    <section class="section" id="usage">
+      <h2>3. How to Use</h2>
+      <ol class="steps">
+        <li class="step">Click the extension icon in your toolbar.</li>
+        <li class="step">Enter a keyword in the input box (for example: <code>calendly</code>).</li>
+        <li class="step">Press <strong>Search</strong>. The extension will fetch Gmail messages in the background and scan subjects, bodies, and links for the keyword.</li>
+        <li class="step">Matched sender emails will appear in real time.</li>
+        <li class="step">Use <strong>Stop</strong> to stop a search midway, <strong>Copy</strong> to copy matched emails to the clipboard, and <strong>Clear</strong> to reset progress.</li>
+        <li class="step">Use <strong>Change</strong> to switch the Gmail account being scanned.</li>
+      </ol>
+
+      <div class="controls">
+        <button class="ghost" onclick="window.print()">Print Guide</button>
+        <button onclick="downloadHTML()">Download HTML</button>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>4. Features</h2>
+      <div class="features">
+        <div class="feature">
+          <strong>Account aware</strong>
+          <div class="meta">Works with your logged-in Gmail account and displays which account is being used.</div>
+        </div>
+        <div class="feature">
+          <strong>Deep scanning</strong>
+          <div class="meta">Finds matches in subject, body text, and links.</div>
+        </div>
+        <div class="feature">
+          <strong>Persistent progress</strong>
+          <div class="meta">Saves progress in Chrome storage; progress persists even if you close the popup.</div>
+        </div>
+        <div class="feature">
+          <strong>Live progress</strong>
+          <div class="meta">Shows real-time count of emails checked so you can monitor scan progress.</div>
+        </div>
+        <div class="feature">
+          <strong>Deduplication</strong>
+          <div class="meta">Results are deduplicated — only unique sender emails are shown.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function downloadHTML(){
+      const html = `<!doctype html>\n${document.documentElement.outerHTML}`;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'gmail-keyword-deep-search-guide.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
 </body>
 </html>
