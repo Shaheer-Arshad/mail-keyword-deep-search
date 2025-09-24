@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="google-site-verification" content="r8LElnP9v80c_HS_72I12USJU_D-PNohNYc3VrLXLZQ" />
   <title>Gmail Keyword Deep Search — Installation & Usage Guide</title>
   <style>
     :root{
@@ -42,122 +41,93 @@
     .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
     .feature{background:#f9fafb;padding:12px;border-radius:8px;border:1px solid #e5e7eb}
     .meta{font-size:0.9rem;color:var(--muted);margin-top:6px}
-    .controls{display:flex;gap:8px;margin-top:12px}
-    button{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;cursor:pointer;font-size:0.95rem}
-    button:hover{background:#1d4ed8}
-    button.ghost{background:#f3f4f6;color:#374151;border:1px solid #d1d5db}
+    img{display:block;max-width:100%;margin:16px 0;border-radius:8px;border:1px solid #e5e7eb}
     footer{margin-top:28px;color:var(--muted);font-size:0.9rem;text-align:center}
     .kbd{display:inline-block;background:#f3f4f6;padding:4px 8px;border-radius:6px;border:1px solid #d1d5db;font-family:monospace;font-size:0.85rem;color:#111827}
-    img{display:block;max-width:100%;margin:16px 0;border-radius:8px;border:1px solid #e5e7eb}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Gmail Keyword Deep Search <small style="font-weight:600;color:var(--muted);">– Installation &amp; Usage Guide</small></h1>
-      <div class="meta">We never store or share your Gmail data. Only lightweight metadata (IDs, headers, labels, dates) is saved locally. <a href="privacy-policy.html">Privacy Policy</a>.</div>
-      <p class="lead">Gmail Keyword Deep Search is a Chrome extension that lets you search your Gmail inbox with powerful filters and a modern dashboard UI.</p>
+      <h1>Gmail Keyword Deep Search <small style="font-weight:600;color:var(--muted);">– Installation & Usage Guide</small></h1>
+      <div class="meta">
+        Official Chrome Web Store page: 
+        <a href="https://chromewebstore.google.com/detail/gmail-keyword-deep-search/cchfdihahiabahhlopidigkbcfnajija" target="_blank">
+          Gmail Keyword Deep Search
+        </a>  
+      </div>
+      <div class="meta">We never store or share your Gmail data. Read our <a href="privacy-policy.html">Privacy Policy</a>.</div>
+      <p class="lead">
+        Gmail Keyword Deep Search is a Chrome extension that helps you search deeply inside your Gmail inbox.  
+        It scans email metadata (subject, sender, recipients, labels, date) in real time, shows live updates in a full dashboard, 
+        and lets you filter, export, and open emails directly in Gmail.
+      </p>
     </header>
 
     <section class="section" id="install">
       <h2>1. Install in Chrome</h2>
-      <p>You can install the extension directly from the Chrome Web Store.</p>
       <ol class="steps">
-        <li class="step">Open <span class="kbd">Chrome</span>.</li>
-        <li class="step">Visit the extension’s page on the Chrome Web Store.</li>
+        <li class="step">Open <a href="https://chromewebstore.google.com/detail/gmail-keyword-deep-search/cchfdihahiabahhlopidigkbcfnajija" target="_blank">the extension page</a> in the Chrome Web Store.</li>
         <li class="step">Click <strong>Add to Chrome → Add Extension</strong>.</li>
-        <li class="step">The extension will appear in your toolbar once installed.</li>
+        <li class="step">Once installed, click the extension icon or open the new dashboard tab.</li>
       </ol>
-      <img src="images/screenshot1.png" alt="Extension dashboard with search input" />
+      <img src="images/homepage.png" alt="Extension dashboard homepage" />
     </section>
 
     <section class="section" id="setup">
       <h2>2. First-Time Setup</h2>
-      <p>The extension uses Google OAuth via <code>chrome.identity</code>. The first time you run a search (or click <strong>Change Account</strong>):</p>
+      <p>The first time you search, you’ll be asked to log in with Google:</p>
       <ol class="steps">
-        <li class="step">A Google sign-in window will appear asking you to select your Gmail account.</li>
-        <li class="step">Google will request permission to allow the extension to read your emails.</li>
-        <li class="step">Click <strong>Allow</strong> to grant access. This is required for scanning emails.</li>
+        <li class="step">Click <strong>Search</strong> or use the <strong>Change Account</strong> button.</li>
+        <li class="step">Select your Gmail account and grant access.</li>
+        <li class="step">⚠️ Google may show a warning that <em>“This app isn’t verified.”</em>  
+          <br/>Click <strong>Advanced</strong> → <strong>Go to Gmail Keyword Deep Search</strong> to continue.  
+          This appears only because the app is not yet verified by Google, but it is safe to use.</li>
       </ol>
-
-      <div class="note">
-        <div>⚠️</div>
-        <div>
-          Some users may see a warning: <strong>“This app hasn’t been verified.”</strong><br>
-          This happens because the extension is not yet verified by Google. It is safe to continue.<br><br>
-          - Click <strong>Advanced</strong><br>
-          - Then click <strong>Go to Gmail Keyword Deep Search (unsafe)</strong>
-        </div>
-      </div>
     </section>
 
     <section class="section" id="usage">
       <h2>3. How to Use</h2>
       <ol class="steps">
-        <li class="step">Click the extension icon in your toolbar. This will open the full <strong>dashboard</strong> (not just a small popup).</li>
-        <li class="step">Enter a keyword (example: <code>invoice</code>) and click <strong>Search</strong>.</li>
-        <li class="step">Results will appear in real time as emails are scanned.</li>
-        <li class="step">Click any email to view its full content, or open it directly in Gmail.</li>
-        <li class="step">Use filters on the left panel to refine results by <strong>labels</strong> or <strong>date range</strong>.</li>
-        <li class="step">Use <strong>Stop</strong> to stop the crawl, <strong>Clear</strong> to reset, and <strong>Change Account</strong> to switch accounts.</li>
-        <li class="step">You can also change dashboard <strong>background themes</strong> from the settings menu.</li>
+        <li class="step">Enter a keyword (e.g. <code>invoice</code>) in the dashboard search bar.</li>
+        <li class="step">Click <strong>Search</strong>. The extension will start scanning your Gmail messages.</li>
+        <li class="step">Progress updates appear live in the <em>Email Search Updates</em> panel — showing the keyword and how many emails have been checked.</li>
+        <li class="step">You can filter results by <strong>labels</strong>, <strong>date ranges</strong>, or refine after search using the filter panel.</li>
+        <li class="step">Click an email row to preview metadata or redirect to Gmail to view the full email.</li>
+        <li class="step">Use the <strong>Export</strong> button to export filtered results as CSV.</li>
+        <li class="step">Use <strong>Stop</strong> to end a search midway, and <strong>Clear</strong> to reset results.</li>
       </ol>
-      <img src="images/screenshot2.png" alt="Search results with filters and email preview" />
+      <img src="images/email search updates.png" alt="Live email search updates panel" />
+      <img src="images/search filters.png" alt="Search filters panel with labels and dates" />
+      <img src="images/results table.png" alt="Results table with email metadata" />
+      <img src="images/export.png" alt="Export button and filters" />
+    </section>
+
+    <section class="section" id="settings">
+      <h2>4. Settings</h2>
+      <p>
+        By default, the extension scans up to <strong>10,000 emails</strong> per search.  
+        You can change this limit anytime from the <strong>Settings</strong> page.
+      </p>
+      <img src="images/settings.png" alt="Settings page with search limit option" />
     </section>
 
     <section class="section" id="features">
-      <h2>4. Features</h2>
+      <h2>5. Key Features</h2>
       <div class="features">
-        <div class="feature">
-          <strong>Modern Dashboard</strong>
-          <div class="meta">Full-page dashboard instead of a small popup, with better navigation and filters.</div>
-        </div>
-        <div class="feature">
-          <strong>Theme Customization</strong>
-          <div class="meta">Change background themes for a personalized look.</div>
-        </div>
-        <div class="feature">
-          <strong>Deep Scanning</strong>
-          <div class="meta">Finds matches in subject, body text, and links.</div>
-        </div>
-        <div class="feature">
-          <strong>Email Preview</strong>
-          <div class="meta">View full email content directly in the dashboard or jump to Gmail.</div>
-        </div>
-        <div class="feature">
-          <strong>Label & Date Filters</strong>
-          <div class="meta">Narrow results by Gmail labels and custom date ranges.</div>
-        </div>
-        <div class="feature">
-          <strong>No Body Storage</strong>
-          <div class="meta">We do not store email bodies — only metadata is saved locally.</div>
-        </div>
-        <div class="feature">
-          <strong>Live Progress</strong>
-          <div class="meta">See the number of emails scanned in real time.</div>
-        </div>
-        <div class="feature">
-          <strong>Deduplication</strong>
-          <div class="meta">Unique results only — no duplicate sender entries.</div>
-        </div>
+        <div class="feature"><strong>Full Dashboard UI</strong><div class="meta">No more popup — a clean, full-page dashboard for searches, filters, and results.</div></div>
+        <div class="feature"><strong>Email Search Updates</strong><div class="meta">Shows the keyword being searched and the live progress of emails being scanned.</div></div>
+        <div class="feature"><strong>Advanced Filters</strong><div class="meta">Filter results by Gmail labels and date ranges, even after the search is complete.</div></div>
+        <div class="feature"><strong>Export Results</strong><div class="meta">Export matched and filtered emails in CSV format for external use.</div></div>
+        <div class="feature"><strong>View in Gmail</strong><div class="meta">Click any result to open the full email directly in Gmail.</div></div>
+        <div class="feature"><strong>Customizable Search Limit</strong><div class="meta">Default 10,000 email scan limit, adjustable in settings.</div></div>
+        <div class="feature"><strong>Privacy</strong><div class="meta">Only email metadata is stored locally; full email bodies are not stored at all.</div></div>
       </div>
     </section>
 
     <footer>
-      <p>Need help? Check our <a href="privacy-policy.html">Privacy Policy</a> or reach out via the Chrome Web Store listing.</p>
+      <p>© Gmail Keyword Deep Search. We never share or upload your Gmail data. For help, visit the <a href="https://chromewebstore.google.com/detail/gmail-keyword-deep-search/cchfdihahiabahhlopidigkbcfnajija" target="_blank">extension page</a>.</p>
     </footer>
   </div>
-
-  <script>
-    function downloadHTML(){
-      const html = `<!doctype html>\n${document.documentElement.outerHTML}`;
-      const blob = new Blob([html], {type: 'text/html'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'gmail-keyword-deep-search-guide.html';
-      document.body.appendChild(a); a.click(); a.remove();
-      URL.revokeObjectURL(url);
-    }
-  </script>
 </body>
 </html>
