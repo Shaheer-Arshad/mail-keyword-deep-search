@@ -1,0 +1,80 @@
+Privacy Policy
+
+Effective Date: May 13, 2026
+
+This Privacy Policy describes how this Chrome Extension (“Extension”, “we”, “our”, or “us”) handles user data.
+
+1. Overview
+
+The Extension is designed to analyze professional profile URLs provided by the user, check whether the profile exists in our internal database, and return a relevance or scoring result based on predefined evaluation criteria.
+
+We do not collect unnecessary personal data and only process information required for the core functionality of the Extension.
+
+2. Data We Process
+
+When you use the Extension, the following data may be processed:
+
+a) Profile URLs
+The Extension processes profile URLs provided by the user or detected on supported pages.
+These URLs are used only to identify and evaluate profiles.
+b) Website Content (Limited)
+The Extension may temporarily read publicly visible profile information from the active page to extract identifiers (such as name, title, or profile ID).
+Only data relevant to scoring or lookup is processed.
+c) Database Lookup Results
+The Extension sends the extracted profile identifier to our backend service to check whether a matching record exists.
+If a match is found, a precomputed rating or evaluation is returned.
+3. How We Use Data
+
+We use the processed information solely for:
+
+Checking if a profile exists in our internal database
+Retrieving or generating a profile score or evaluation
+Displaying results to the user inside the Extension
+
+We do not use this data for advertising, profiling unrelated to the Extension’s purpose, or selling to third parties.
+
+4. Data Storage
+We do not permanently store personal browsing data from users.
+Only minimal logs required for system performance and debugging may be stored, such as:
+Request timestamps
+Anonymous request identifiers
+These logs do not contain sensitive personal content.
+5. Data Sharing
+
+We do not sell or share personal data with third parties.
+
+Data is only shared with our own backend service for the purpose of:
+
+Profile lookup
+Generating or retrieving scoring results
+
+No unrelated third-party access is involved.
+
+6. Data Retention
+Profile lookup data is not permanently stored.
+Temporary processing data is discarded after evaluation.
+Any logs are retained only for operational monitoring and are anonymized where possible.
+7. Permissions Usage
+
+The Extension may request browser permissions to:
+
+Access the active tab (to read profile URL/content)
+Execute scripts on supported pages (to extract visible profile data)
+Store user settings locally
+
+These permissions are strictly used for core functionality and nothing else.
+
+8. Security
+
+We implement reasonable security measures to protect data transmission between the Extension and our backend services, including HTTPS encryption.
+
+9. User Control
+
+Users can:
+
+Disable the Extension at any time
+Remove the Extension to stop all data processing
+Avoid analysis by not triggering the extension on profile pages
+10. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any changes will be reflected in the updated version with a revised “Effective Date”.
