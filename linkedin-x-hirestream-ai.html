@@ -1,80 +1,165 @@
-Privacy Policy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9fafb;
+            color: #111827;
+        }
 
-Effective Date: May 13, 2026
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
 
-This Privacy Policy describes how this Chrome Extension (“Extension”, “we”, “our”, or “us”) handles user data.
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
 
-1. Overview
+        h2 {
+            margin-top: 30px;
+            font-size: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 6px;
+        }
 
-The Extension is designed to analyze professional profile URLs provided by the user, check whether the profile exists in our internal database, and return a relevance or scoring result based on predefined evaluation criteria.
+        p, li {
+            font-size: 14px;
+            color: #374151;
+        }
 
-We do not collect unnecessary personal data and only process information required for the core functionality of the Extension.
+        ul {
+            padding-left: 20px;
+        }
 
-2. Data We Process
+        .meta {
+            color: #6b7280;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
 
-When you use the Extension, the following data may be processed:
+        .section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-a) Profile URLs
-The Extension processes profile URLs provided by the user or detected on supported pages.
-These URLs are used only to identify and evaluate profiles.
-b) Website Content (Limited)
-The Extension may temporarily read publicly visible profile information from the active page to extract identifiers (such as name, title, or profile ID).
-Only data relevant to scoring or lookup is processed.
-c) Database Lookup Results
-The Extension sends the extracted profile identifier to our backend service to check whether a matching record exists.
-If a match is found, a precomputed rating or evaluation is returned.
-3. How We Use Data
+<div class="container">
 
-We use the processed information solely for:
+    <h1>Privacy Policy</h1>
+    <div class="meta"><strong>Effective Date:</strong> May 13, 2026</div>
 
-Checking if a profile exists in our internal database
-Retrieving or generating a profile score or evaluation
-Displaying results to the user inside the Extension
+    <p>
+        This Privacy Policy describes how this Chrome Extension (“Extension”, “we”, “our”, or “us”) handles user data.
+    </p>
 
-We do not use this data for advertising, profiling unrelated to the Extension’s purpose, or selling to third parties.
+    <h2>1. Overview</h2>
+    <p>
+        The Extension is designed to analyze professional profile URLs provided by the user, check whether the profile exists in our internal database, and return a relevance or scoring result based on predefined evaluation criteria.
+    </p>
+    <p>
+        We do not collect unnecessary personal data and only process information required for the core functionality of the Extension.
+    </p>
 
-4. Data Storage
-We do not permanently store personal browsing data from users.
-Only minimal logs required for system performance and debugging may be stored, such as:
-Request timestamps
-Anonymous request identifiers
-These logs do not contain sensitive personal content.
-5. Data Sharing
+    <h2>2. Data We Process</h2>
 
-We do not sell or share personal data with third parties.
+    <div class="section">
+        <p><strong>a) Profile URLs</strong></p>
+        <p>
+            The Extension processes profile URLs provided by the user or detected on supported pages.
+            These URLs are used only to identify and evaluate profiles.
+        </p>
+    </div>
 
-Data is only shared with our own backend service for the purpose of:
+    <div class="section">
+        <p><strong>b) Website Content (Limited)</strong></p>
+        <p>
+            The Extension may temporarily read publicly visible profile information from the active page to extract identifiers (such as name, title, or profile ID).
+            Only data relevant to scoring or lookup is processed.
+        </p>
+    </div>
 
-Profile lookup
-Generating or retrieving scoring results
+    <div class="section">
+        <p><strong>c) Database Lookup Results</strong></p>
+        <p>
+            The Extension sends the extracted profile identifier to our backend service to check whether a matching record exists.
+            If a match is found, a precomputed rating or evaluation is returned.
+        </p>
+    </div>
 
-No unrelated third-party access is involved.
+    <h2>3. How We Use Data</h2>
+    <ul>
+        <li>Checking if a profile exists in our internal database</li>
+        <li>Retrieving or generating a profile score or evaluation</li>
+        <li>Displaying results to the user inside the Extension</li>
+    </ul>
+    <p>
+        We do not use this data for advertising, profiling unrelated to the Extension’s purpose, or selling to third parties.
+    </p>
 
-6. Data Retention
-Profile lookup data is not permanently stored.
-Temporary processing data is discarded after evaluation.
-Any logs are retained only for operational monitoring and are anonymized where possible.
-7. Permissions Usage
+    <h2>4. Data Storage</h2>
+    <p>
+        We do not permanently store personal browsing data from users.
+        Only minimal logs required for system performance and debugging may be stored, such as request timestamps and anonymous request identifiers.
+        These logs do not contain sensitive personal content.
+    </p>
 
-The Extension may request browser permissions to:
+    <h2>5. Data Sharing</h2>
+    <p>
+        We do not sell or share personal data with third parties.
+    </p>
+    <p>
+        Data is only shared with our own backend service for:
+    </p>
+    <ul>
+        <li>Profile lookup</li>
+        <li>Generating or retrieving scoring results</li>
+    </ul>
 
-Access the active tab (to read profile URL/content)
-Execute scripts on supported pages (to extract visible profile data)
-Store user settings locally
+    <h2>6. Data Retention</h2>
+    <p>
+        Profile lookup data is not permanently stored. Temporary processing data is discarded after evaluation.
+        Any logs are retained only for operational monitoring and are anonymized where possible.
+    </p>
 
-These permissions are strictly used for core functionality and nothing else.
+    <h2>7. Permissions Usage</h2>
+    <p>The Extension may request browser permissions to:</p>
+    <ul>
+        <li>Access the active tab (to read profile URL/content)</li>
+        <li>Execute scripts on supported pages (to extract visible profile data)</li>
+        <li>Store user settings locally</li>
+    </ul>
+    <p>These permissions are strictly used for core functionality and nothing else.</p>
 
-8. Security
+    <h2>8. Security</h2>
+    <p>
+        We implement reasonable security measures to protect data transmission between the Extension and our backend services, including HTTPS encryption.
+    </p>
 
-We implement reasonable security measures to protect data transmission between the Extension and our backend services, including HTTPS encryption.
+    <h2>9. User Control</h2>
+    <ul>
+        <li>Disable the Extension at any time</li>
+        <li>Remove the Extension to stop all data processing</li>
+        <li>Avoid analysis by not triggering the Extension on profile pages</li>
+    </ul>
 
-9. User Control
+    <h2>10. Changes to This Policy</h2>
+    <p>
+        We may update this Privacy Policy from time to time. Any changes will be reflected in the updated version with a revised “Effective Date”.
+    </p>
 
-Users can:
+</div>
 
-Disable the Extension at any time
-Remove the Extension to stop all data processing
-Avoid analysis by not triggering the extension on profile pages
-10. Changes to This Policy
-
-We may update this Privacy Policy from time to time. Any changes will be reflected in the updated version with a revised “Effective Date”.
+</body>
+</html>
